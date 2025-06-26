@@ -1,6 +1,7 @@
 import { PrismaAdapter } from '@auth/prisma-adapter';
 import NextAuth from 'next-auth';
 import GitHub from 'next-auth/providers/github';
+import Google from 'next-auth/providers/google';
 import { db } from './lib/db';
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
@@ -17,6 +18,17 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           email: profile.email,
           imageUrl: profile.avatar_url,
           username: profile.login,
+        };
+      },
+    }),
+    Google({
+      profile(profile) {
+        return {
+          id: profile.sub,
+          name: profile.name,
+          email: profile.email,
+          imageUrl: profile.picture,
+          username: profile.email?.split('@')[0] || profile.sub,
         };
       },
     }),
