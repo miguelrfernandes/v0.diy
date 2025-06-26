@@ -27,21 +27,18 @@ v0.diy is an open-source alternative to v0.dev that puts the power of AI-driven 
 ## 🚀 Features
 
 ### UI Generation
-
 - Generate components from text prompts or images
 - Support for multiple UI frameworks
 - Real-time preview and editing
 - Responsive design analyzer
 
 ### AI Integration
-
 - Multiple provider support
 - Custom model selection
 - Optimized prompts for UI generation
 - Advanced context understanding
 
 ### Developer Tools
-
 - Code copy functionality
 - Component forking
 - Theme management
@@ -51,7 +48,6 @@ v0.diy is an open-source alternative to v0.dev that puts the power of AI-driven 
 ## 🛠 Getting Started
 
 ### Prerequisites
-
 - Node.js 18.x or later
 - PostgreSQL database
 - Git
@@ -59,26 +55,22 @@ v0.diy is an open-source alternative to v0.dev that puts the power of AI-driven 
 ### Quick Start
 
 1. Clone the repository:
-
 ```bash
 git clone https://github.com/yourusername/v0.diy.git
 cd v0.diy
 ```
 
 2. Install dependencies:
-
 ```bash
 npm install
 ```
 
 3. Set up environment variables:
-
    - Create a `.env.local` file in the root directory
    - Copy the contents from `.env.example`
    - Fill in your configuration values
 
 4. Start the development server:
-
 ```bash
 npm run dev
 ```
@@ -97,34 +89,11 @@ DATABASE_URL=postgresql_url_here
 AUTH_SECRET=your_auth_secret
 AUTH_GITHUB_ID=your_auth_github_id
 AUTH_GITHUB_SECRET=your_auth_github_secret
-AUTH_GOOGLE_ID=your_google_oauth_client_id
-AUTH_GOOGLE_SECRET=your_google_oauth_client_secret
 
 # Optional: Redis for view count
 UPSTASH_REDIS_REST_URL=your_upstash_redis_rest_url
 UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_rest_token
 ```
-
-### Setting up Google OAuth
-
-1. Go to the [Google Cloud Console](https://console.cloud.google.com/)
-2. Create a new project or select an existing one
-3. Enable the Google+ API
-4. Go to "Credentials" → "Create Credentials" → "OAuth 2.0 Client IDs"
-5. Set the application type to "Web application"
-6. Add authorized redirect URIs:
-   - For development: `http://localhost:3000/api/auth/callback/google`
-   - For production: `https://yourdomain.com/api/auth/callback/google`
-7. Copy the Client ID and Client Secret to your `.env.local` file
-
-### Setting up GitHub OAuth
-
-1. Go to [GitHub Developer Settings](https://github.com/settings/developers)
-2. Click "New OAuth App"
-3. Set the Authorization callback URL:
-   - For development: `http://localhost:3000/api/auth/callback/github`
-   - For production: `https://yourdomain.com/api/auth/callback/github`
-4. Copy the Client ID and Client Secret to your `.env.local` file
 
 ## 🤖 Tech Stack
 
