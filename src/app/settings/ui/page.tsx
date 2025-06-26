@@ -140,6 +140,31 @@ export default function LLMSettingsPage() {
               </div>
             </div>
 
+            <div className="p-4 rounded-lg bg-muted/50 border border-border hover:bg-muted/70 transition-all duration-200">
+              <div className="flex items-center justify-between">
+                <div className="space-y-1">
+                  <Label
+                    htmlFor="presentationMode"
+                    className="text-sm font-medium text-foreground flex items-center space-x-2"
+                  >
+                    <Zap className="w-4 h-4 text-purple-500" />
+                    <span>Presentation mode</span>
+                  </Label>
+                  <p className="text-sm text-muted-foreground">
+                    This mode is designed to generate a slides presentation with
+                    React.
+                  </p>
+                </div>
+                <Switch
+                  id="presentationMode"
+                  disabled
+                  checked={false}
+                  onCheckedChange={(val) => setMode('creativeMode', val)}
+                  className="data-[state=checked]:bg-primary"
+                />
+              </div>
+            </div>
+
             <div className="bg-blue-50/50 dark:bg-blue-950/50 p-4 rounded-lg flex items-start space-x-2 text-blue-800 dark:text-blue-300 border border-blue-100 dark:border-blue-900">
               <InfoIcon className="w-5 h-5 mt-0.5 flex-shrink-0" />
               <p className="text-sm">v0.diy mode coming soon.</p>
